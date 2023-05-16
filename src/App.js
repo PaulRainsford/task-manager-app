@@ -14,6 +14,12 @@ function TaskManager () {
     setTasks([...tasks, inputValue])
     setInputValue('')
   }
+
+  function handleDelete(index){
+    const newTasks = [...tasks]
+    newTasks.splice(index, 1)
+    setTasks(newTasks)
+  }
   return (
     <div>
       <h1>Task Manager</h1>
