@@ -28,9 +28,9 @@ function TaskManager () {
         <button onClick={handleSubmit}>Add Task</button>
       </form>
       <ul>
-        {tasks.map((task) => (
-        <li key={task}>{task}
-        <button>Delete</button>
+        {tasks.map((task, index) => (
+        <li key={index}>{task}
+        <button onClick={() =>handleDelete(index)}>Delete</button>
         </li>
         ))}
       </ul>
